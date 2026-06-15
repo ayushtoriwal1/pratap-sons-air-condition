@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: #262626;
+    background: #ffffff;
+  }
+
+  ::selection {
+    background: #2563eb;
+    color: #ffffff;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24;
+  }
+
+  .container-max {
+    @apply max-w-6xl mx-auto;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 bg-primary-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-primary-700 transition-colors duration-150 text-sm tracking-wide;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 bg-white text-primary-600 font-semibold px-6 py-3 rounded-lg border border-primary-200 hover:bg-primary-50 transition-colors duration-150 text-sm tracking-wide;
+  }
+
+  .btn-accent {
+    @apply inline-flex items-center justify-center gap-2 bg-accent-600 text-white font-semibold px-6 py-3 rounded-lg hover:bg-accent-700 transition-colors duration-150 text-sm tracking-wide;
+  }
+
+  .heading-1 {
+    @apply text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight;
+  }
+
+  .heading-2 {
+    @apply text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight;
+  }
+
+  .heading-3 {
+    @apply text-xl sm:text-2xl font-semibold tracking-tight leading-snug;
+  }
+
+  .text-body {
+    @apply text-base leading-relaxed text-neutral-600;
+  }
+
+  .text-body-sm {
+    @apply text-sm leading-relaxed text-neutral-500;
+  }
+}
